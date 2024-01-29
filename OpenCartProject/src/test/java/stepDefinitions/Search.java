@@ -12,7 +12,7 @@ public class Search {
 	}
 
 	@When("User enters valid product {string} into Search box field")
-	public void user_enters_valid_product_into_search_box_field(String string) {
+	public void user_enters_valid_product_into_search_box_field(String validProductText) {
 	    
 	}
 
@@ -27,7 +27,7 @@ public class Search {
 	}
 
 	@When("User enters invalid product {string} into Search box field")
-	public void user_enters_invalid_product_into_search_box_field(String string) {
+	public void user_enters_invalid_product_into_search_box_field(String invalidProductText) {
 	    
 	}
 
