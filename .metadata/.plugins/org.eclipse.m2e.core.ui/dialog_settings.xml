@@ -25,10 +25,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="ocp.OpenCartProject"/>
 		</list>
 		<list key="groupId">
+			<item value="ocp"/>
 		</list>
 		<list key="artifactId">
+			<item value="OpenCartProject"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
