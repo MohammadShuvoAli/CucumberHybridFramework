@@ -1,5 +1,8 @@
 package stepDefinitions;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -7,8 +10,13 @@ import io.cucumber.java.en.When;
 
 public class Register {
 	
+	WebDriver driver;
+	
 	@Given("User navigates to Register Account page")
 	public void user_navigates_to_register_account_page() {
+		
+		driver.findElement(By.xpath("//span[normalize-space()='My Account']")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='Register']")).click();
 	    
 	}
 
