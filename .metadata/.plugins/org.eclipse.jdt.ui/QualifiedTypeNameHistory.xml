@@ -6,10 +6,14 @@
     <fullyQualifiedTypeName name="io.cucumber.java.en.Then"/>
     <fullyQualifiedTypeName name="io.cucumber.datatable.DataTable"/>
     <fullyQualifiedTypeName name="io.cucumber.java.Before"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
-    <fullyQualifiedTypeName name="java.time.Duration"/>
     <fullyQualifiedTypeName name="io.cucumber.java.After"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
-    <fullyQualifiedTypeName name="org.junit.Assert"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.safari.SafariDriver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.edge.EdgeDriver"/>
+    <fullyQualifiedTypeName name="java.time.Duration"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+    <fullyQualifiedTypeName name="factory.DriverFactory"/>
+    <fullyQualifiedTypeName name="org.junit.Assert"/>
 </qualifiedTypeNameHistroy>

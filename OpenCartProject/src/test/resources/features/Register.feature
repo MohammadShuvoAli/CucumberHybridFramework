@@ -3,8 +3,8 @@ Feature: Registration functionality
   Scenario: User creates an account only with mandatory fields
     Given User navigates to Register Account page
     When User enters the details into below fields
-      | firstName | Mohammad   |
-      | lastName  | Shuvo      |
+      | firstName | Shuvo      |
+      | lastName  | Ali        |
       | telephone | 1234567890 |
       | password  |      12345 |
     And User selects Privacy Policy
@@ -14,8 +14,8 @@ Feature: Registration functionality
   Scenario: User creates an account with all fields
     Given User navigates to Register Account page
     When User enters the details into below fields
-      | firstName | Mohammad   |
-      | lastName  | Shuvo      |
+      | firstName | Shuvo      |
+      | lastName  | Ali        |
       | telephone | 1234567890 |
       | password  |      12345 |
     And User selects Yes for Newsletter
@@ -26,11 +26,11 @@ Feature: Registration functionality
   Scenario: User creates a duplicate account
     Given User navigates to Register Account page
     When User enters the details into below fields with duplicate email
-      | firstName | Mohammad              |
-      | lastName  | Shuvo                 |
-      | email     | picek83628@cubene.com |
-      | telephone |            1234567890 |
-      | password  |                 12345 |
+      | firstName | Shuvo              |
+      | lastName  | Ali                |
+      | email     | aAlicap4@gmail.com |
+      | telephone |         1234567890 |
+      | password  |              12345 |
     And User selects Yes for Newsletter
     And User selects Privacy Policy
     And User clicks on Continue button
