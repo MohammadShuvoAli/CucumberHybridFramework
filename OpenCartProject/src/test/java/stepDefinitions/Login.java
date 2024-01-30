@@ -1,16 +1,10 @@
 package stepDefinitions;
 
-import java.time.Duration;
-
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
+import factory.DriverFactory;
+import io.cucumber.java.en.Given; 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -18,27 +12,10 @@ public class Login {
 	
 	WebDriver driver;
 	
-	@Before
-	public void setup() {
-		
-		WebDriver driver = new ChromeDriver();
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get("https://demo.opencart.com/index.php");
-		
-	}
-	
-	@After
-	public void tearDown() {
-		
-		driver.quit();
-		
-	}
-	
 	@Given("User has navigated to login page")
 	public void user_has_navigated_to_login_page() {
 		
+		driver = DriverFactory.getDriver();
 		driver.findElement(By.xpath("//span[normalize-space()='My Account']")).click();
 		driver.findElement(By.xpath("//a[normalize-space()='Login']")).click();
 	
