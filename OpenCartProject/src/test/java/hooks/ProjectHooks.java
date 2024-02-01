@@ -21,7 +21,7 @@ public class ProjectHooks {
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get("https://tutorialsninja.com/demo/index.php?route=account/register");
+		driver.get("https://tutorialsninja.com/demo/index.php");
 
 	}
 

@@ -25,10 +25,10 @@ Feature: Registration functionality
 
   Scenario: User creates a duplicate account
     Given User navigates to Register Account page
-    When User enters the details into below fields with duplicate email
+    When User enters the details into below fields
       | firstName | Shuvo              |
       | lastName  | Ali                |
-      | email     | aAlicap4@gmail.com |
+      | email     | admin@admin.com |
       | telephone |         1234567890 |
       | password  |              12345 |
     And User selects Yes for Newsletter
