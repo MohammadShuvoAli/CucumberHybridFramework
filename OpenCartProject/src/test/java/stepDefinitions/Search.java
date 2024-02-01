@@ -1,13 +1,20 @@
 package stepDefinitions;
 
+import org.openqa.selenium.WebDriver;
+
+import factory.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Search {
-
+	
+	WebDriver driver;
+	
 	@Given("User opens the Application")
 	public void user_opens_the_application() {
+		
+		driver = DriverFactory.getDriver();
 	    
 	}
 

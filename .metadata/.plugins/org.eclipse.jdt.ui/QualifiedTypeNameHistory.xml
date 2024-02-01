@@ -13,7 +13,7 @@
     <fullyQualifiedTypeName name="org.openqa.selenium.safari.SafariDriver"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.edge.EdgeDriver"/>
     <fullyQualifiedTypeName name="java.time.Duration"/>
+    <fullyQualifiedTypeName name="org.junit.Assert"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
     <fullyQualifiedTypeName name="factory.DriverFactory"/>
-    <fullyQualifiedTypeName name="org.junit.Assert"/>
 </qualifiedTypeNameHistroy>
