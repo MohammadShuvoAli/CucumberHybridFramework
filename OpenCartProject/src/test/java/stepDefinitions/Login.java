@@ -9,6 +9,7 @@ import factory.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.HomePage;
 
 public class Login {
 
@@ -18,9 +19,9 @@ public class Login {
 	public void user_has_navigated_to_login_page() {
 
 		driver = DriverFactory.getDriver();
-		driver.findElement(By.xpath("//span[normalize-space()='My Account']")).click();
-		driver.findElement(By.xpath("//a[normalize-space()='Login']")).click();
-
+		HomePage homepage = new HomePage(driver);
+		homepage.clickOnMyAccount();
+		homepage.selectLoginOption();
 	}
 
 	@When("User enters valid email address {string} into email field")
