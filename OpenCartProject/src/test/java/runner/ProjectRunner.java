@@ -5,7 +5,11 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features", glue = {"stepDefinitions", "hooks"})
+@CucumberOptions(
+    features = "src/test/resources/features",
+    glue = {"stepDefinitions", "hooks"},
+    monochrome = true
+)
 public class ProjectRunner {
-
+    // Leave this class empty
 }

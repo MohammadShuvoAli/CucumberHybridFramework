@@ -52,7 +52,7 @@ public class Search {
 	public void user_should_get_a_message_about_no_product_matching() {
 
 		Assert.assertEquals("There is no product that matches the search criteria.", driver
-				.findElement(By.xpath("//p[contains(text(),'There is no product that matches the search criter')]")));
+				.findElement(By.xpath("//p[contains(text(),'There is no product that matches the search criter')]")).getText());
 
 	}
 
