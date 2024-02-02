@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.util.Date;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +27,13 @@ public class Login {
 	public void user_enters_valid_email_address_into_email_field(String emailText) {
 
 		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(emailText);
+
+	}
+	
+	@When("User enters invalid email address into email field")
+	public void user_enters_invalid_email_address_into_email_field() {
+
+		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(randomEmailGenerator());
 
 	}
 
@@ -82,5 +91,11 @@ public class Login {
 		driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys("");
 
 	}
-
+	
+	private String randomEmailGenerator() {
+		
+		Date date = new Date();
+		return "shuvo" + date.toString().replace(" ","_").replace(":", "_") + "@gmail.com";
+		
+	}
 }
