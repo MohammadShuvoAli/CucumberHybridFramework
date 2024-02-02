@@ -28,16 +28,14 @@ public class Register {
 
 	@When("User enters the details into below fields")
 	public void user_enters_the_details_into_below_fields(DataTable dataTable) {
-		
 		Map<String, String> dataMap = dataTable.asMap(String.class, String.class);
-		
-		driver.findElement(By.xpath("//input[@id='input-firstname']")).sendKeys("firstName");
-		driver.findElement(By.xpath("//input[@id='input-lastname']")).sendKeys("lastName");
-		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys("email");
-		driver.findElement(By.xpath("//input[@id='input-telephone']")).sendKeys("telephone");
-		driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys("password");
-		driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys("password");
-		
+
+		driver.findElement(By.xpath("//input[@id='input-firstname']")).sendKeys(dataMap.get("firstName"));
+		driver.findElement(By.xpath("//input[@id='input-lastname']")).sendKeys(dataMap.get("lastName"));
+		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(dataMap.get("email"));
+		driver.findElement(By.xpath("//input[@id='input-telephone']")).sendKeys(dataMap.get("telephone"));
+		driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys(dataMap.get("password"));
+		driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys(dataMap.get("password"));
 	}
 
 	@When("User selects Privacy Policy")
