@@ -1462,3 +1462,27 @@
 2024-02-03 03:38:53,476 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Shuvo\OneDrive - American International University-Bangladesh\GitHub\CucumberHybridFramework\OpenCartProject\src\main\resources
 2024-02-03 03:38:53,479 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2024-02-03 03:38:53,483 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2024-02-03 03:40:16,121 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-02-03 03:40:16,121 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Shuvo\OneDrive - American International University-Bangladesh\GitHub\CucumberHybridFramework\OpenCartProject\src\main\resources
+2024-02-03 03:40:16,126 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-02-03 03:40:16,129 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2024-02-03 03:41:39,994 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-02-03 03:41:39,994 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Shuvo\OneDrive - American International University-Bangladesh\GitHub\CucumberHybridFramework\OpenCartProject\src\main\resources
+2024-02-03 03:41:39,998 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-02-03 03:41:40,003 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2024-02-03 03:41:56,176 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-02-03 03:41:56,177 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Shuvo\OneDrive - American International University-Bangladesh\GitHub\CucumberHybridFramework\OpenCartProject\src\main\resources
+2024-02-03 03:41:56,181 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-02-03 03:41:56,184 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2024-02-03 03:43:38,534 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-02-03 03:43:38,535 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Shuvo\OneDrive - American International University-Bangladesh\GitHub\CucumberHybridFramework\OpenCartProject\src\main\resources
+2024-02-03 03:43:38,538 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-02-03 03:43:38,541 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2024-02-03 03:43:56,544 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-02-03 03:43:56,545 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Shuvo\OneDrive - American International University-Bangladesh\GitHub\CucumberHybridFramework\OpenCartProject\src\main\resources
+2024-02-03 03:43:56,548 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-02-03 03:43:56,550 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2024-02-03 03:44:12,155 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-02-03 03:44:12,155 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Shuvo\OneDrive - American International University-Bangladesh\GitHub\CucumberHybridFramework\OpenCartProject\src\main\resources
+2024-02-03 03:44:12,159 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-02-03 03:44:12,161 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
