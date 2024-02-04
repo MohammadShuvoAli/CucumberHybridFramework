@@ -121,32 +121,32 @@ public class RegisterPage {
 	}
 
 	public String getFirstNameWarning() {
-		
+
 		return firstNameWarning.getText();
 
 	}
 
 	public String getLastNameWarning() {
-		
+
 		return lastNameWarning.getText();
 
 	}
 
 	public String getEmailWarning() {
-		
+
 		return emailWarning.getText();
-		
+
 	}
 
 	public String getTelephoneWarning() {
-		
+
 		return telephoneWarning.getText();
-		
+
 	}
 
 	public String getPassowrdWarning() {
-		
+
 		return passwordWarning.getText();
-		
+
 	}
 }
