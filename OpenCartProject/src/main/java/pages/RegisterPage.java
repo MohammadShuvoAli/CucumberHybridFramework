@@ -69,31 +69,31 @@ public class RegisterPage {
 
 	public void enterLastName(String lastNameText) {
 
-		firstNameField.sendKeys(lastNameText);
+		lastNameField.sendKeys(lastNameText);
 
 	}
 
 	public void enterEmail(String emailText) {
 
-		firstNameField.sendKeys(emailText);
+		emailField.sendKeys(emailText);
 
 	}
 
 	public void enterTelephone(String telephoneText) {
 
-		firstNameField.sendKeys(telephoneText);
+		telephoneField.sendKeys(telephoneText);
 
 	}
 
 	public void enterPassword(String passwordText) {
 
-		firstNameField.sendKeys(passwordText);
+		passwordField.sendKeys(passwordText);
 
 	}
 
 	public void enterConfirmPassword(String confirmPasswordText) {
 
-		firstNameField.sendKeys(confirmPasswordText);
+		confirmPasswordField.sendKeys(confirmPasswordText);
 
 	}
 
