@@ -11,6 +11,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.AccountSuccessPage;
 import pages.HomePage;
 import pages.RegisterPage;
 import utils.CommonUtils;
@@ -61,8 +62,7 @@ public class Register {
 	@When("User selects Privacy Policy")
 	public void user_selects_privacy_policy() {
 
-		driver.findElement(By.xpath("//input[@name='agree']")).click();
-
+		registerPage.selectPrivacyPolicy();
 	}
 
 	@When("User clicks on Continue button")
@@ -74,16 +74,17 @@ public class Register {
 
 	@Then("User account should get created successfully")
 	public void user_account_should_get_created_successfully() {
+		
+		AccountSuccessPage accountSuccessPage = new AccountSuccessPage(driver);
 
-		Assert.assertEquals("Your Account Has Been Created!",
-				driver.findElement(By.xpath("//div[@id='content']/h1")).getText());
+		Assert.assertEquals("Your Account Has Been Created!", accountSuccessPage.getPageHeading());
 
 	}
 
 	@When("User selects Yes for Newsletter")
 	public void user_selects_yes_for_newsletter() {
 
-		driver.findElement(By.xpath("//label[normalize-space()='Yes']//input[@name='newsletter']")).click();
+		registerPage.selectYesNewsLetterOption();
 
 	}
 

@@ -37,6 +37,12 @@ public class RegisterPage {
 	@FindBy(name = "agree")
 	private WebElement privacyPolicyOption;
 
+	@FindBy(xpath = "//input[@value='Continue']")
+	private WebElement continueButton;
+
+	@FindBy(xpath = "//input[@name='newsletter' and @value=1]")
+	private WebElement YesNewsLetterOption;
+
 	public void enterFirstName(String firstNameText) {
 
 		firstNameField.sendKeys(firstNameText);
@@ -72,10 +78,22 @@ public class RegisterPage {
 		firstNameField.sendKeys(confirmPasswordText);
 
 	}
-	
+
 	public void selectPrivacyPolicy() {
 
 		privacyPolicyOption.click();
+
+	}
+
+	public void clickOnContinueButton() {
+
+		continueButton.click();
+
+	}
+
+	public void selectYesNewsLetterOption() {
+
+		YesNewsLetterOption.click();
 
 	}
 
