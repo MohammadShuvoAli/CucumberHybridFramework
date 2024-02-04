@@ -91,39 +91,26 @@ public class Register {
 	@Then("User should get a proper warning about duplicate email")
 	public void user_should_get_a_proper_warning_about_duplicate_email() {
 
-		Assert.assertTrue(driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText()
-				.contains("Warning: E-Mail Address is already registered!"));
+		Assert.assertTrue(registerPage.getWarningMessageText().contains("Warning: E-Mail Address is already registered!"));
 
 	}
 
 	@When("User dont enter any details into fields")
 	public void user_dont_enter_any_details_into_fields() {
 
-		// Intentionally Left Blank
+		registerPage = new RegisterPage(driver);
 
 	}
 
 	@Then("User should get proper warning messages for every mandatory field")
 	public void user_should_get_proper_warning_messages_for_every_mandatory_field() {
 
-		Assert.assertTrue(driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText()
-				.contains("Warning: You must agree to the Privacy Policy!"));
-		Assert.assertEquals("First Name must be between 1 and 32 characters!",
-				driver.findElement(
-						By.xpath("//div[contains(text(),'First Name must be between 1 and 32 characters!')]"))
-						.getText());
-		Assert.assertEquals("Last Name must be between 1 and 32 characters!",
-				driver.findElement(By.xpath("//div[contains(text(),'Last Name must be between 1 and 32 characters!')]"))
-						.getText());
-		Assert.assertEquals("E-Mail Address does not appear to be valid!",
-				driver.findElement(By.xpath("//div[contains(text(),'E-Mail Address does not appear to be valid!')]"))
-						.getText());
-		Assert.assertEquals("Telephone must be between 3 and 32 characters!",
-				driver.findElement(By.xpath("//div[contains(text(),'Telephone must be between 3 and 32 characters!')]"))
-						.getText());
-		Assert.assertEquals("Password must be between 4 and 20 characters!",
-				driver.findElement(By.xpath("//div[contains(text(),'Password must be between 4 and 20 characters!')]"))
-						.getText());
+		Assert.assertTrue(registerPage.getWarningMessageText().contains("Warning: You must agree to the Privacy Policy!"));
+		Assert.assertEquals("First Name must be between 1 and 32 characters!", registerPage.getFirstNameWarning());
+		Assert.assertEquals("Last Name must be between 1 and 32 characters!", registerPage.getLastNameWarning());
+		Assert.assertEquals("E-Mail Address does not appear to be valid!", registerPage.getEmailWarning());
+		Assert.assertEquals("Telephone must be between 3 and 32 characters!", registerPage.getTelephoneWarning());
+		Assert.assertEquals("Password must be between 4 and 20 characters!", registerPage.getPassowrdWarning());
 
 	}
 }

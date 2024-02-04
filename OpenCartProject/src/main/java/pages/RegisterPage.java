@@ -43,6 +43,24 @@ public class RegisterPage {
 	@FindBy(xpath = "//input[@name='newsletter' and @value=1]")
 	private WebElement YesNewsLetterOption;
 
+	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
+	private WebElement warningMessage;
+
+	@FindBy(xpath = "//*[@id=\"account\"]/div[2]/div/div")
+	private WebElement firstNameWarning;
+
+	@FindBy(xpath = "//*[@id=\"account\"]/div[3]/div/div")
+	private WebElement lastNameWarning;
+
+	@FindBy(xpath = "//*[@id=\"account\"]/div[4]/div/div")
+	private WebElement emailWarning;
+
+	@FindBy(xpath = "//*[@id=\"account\"]/div[5]/div/div")
+	private WebElement telephoneWarning;
+
+	@FindBy(xpath = "//*[@id=\"content\"]/form/fieldset[2]/div[1]/div/div")
+	private WebElement passwordWarning;
+
 	public void enterFirstName(String firstNameText) {
 
 		firstNameField.sendKeys(firstNameText);
@@ -97,4 +115,38 @@ public class RegisterPage {
 
 	}
 
+	public String getWarningMessageText() {
+
+		return warningMessage.getText();
+	}
+
+	public String getFirstNameWarning() {
+		
+		return firstNameWarning.getText();
+
+	}
+
+	public String getLastNameWarning() {
+		
+		return lastNameWarning.getText();
+
+	}
+
+	public String getEmailWarning() {
+		
+		return emailWarning.getText();
+		
+	}
+
+	public String getTelephoneWarning() {
+		
+		return telephoneWarning.getText();
+		
+	}
+
+	public String getPassowrdWarning() {
+		
+		return passwordWarning.getText();
+		
+	}
 }
