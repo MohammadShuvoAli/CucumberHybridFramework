@@ -27,21 +27,21 @@ public class Login {
 	@When("User enters valid email address {string} into email field")
 	public void user_enters_valid_email_address_into_email_field(String emailText) {
 
-		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(emailText);
+		driver.findElement(By.id("input-email")).sendKeys(emailText);
 
 	}
 	
 	@When("User enters invalid email address into email field")
 	public void user_enters_invalid_email_address_into_email_field() {
 
-		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(randomEmailGenerator());
+		driver.findElement(By.id("input-email")).sendKeys(randomEmailGenerator());
 
 	}
 
 	@When("User enters valid password {string} into password field")
 	public void user_enters_valid_password_into_password_field(String passwordText) {
 
-		driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys(passwordText);
+		driver.findElement(By.id("input-password")).sendKeys(passwordText);
 
 	}
 
@@ -67,7 +67,7 @@ public class Login {
 	@When("User has entered valid password {string} into password field")
 	public void user_has_entered_valid_password_into_password_field(String passwordText) {
 
-		driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys(passwordText);
+		driver.findElement(By.id("input-password")).sendKeys(passwordText);
 
 	}
 
@@ -82,14 +82,14 @@ public class Login {
 	@When("User dont enter any email address into email field")
 	public void user_dont_enter_any_email_address_into_email_field() {
 
-		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys("");
+		driver.findElement(By.id("input-email")).sendKeys("");
 
 	}
 
 	@When("User dont enter password into password field")
 	public void user_dont_enter_password_into_password_field() {
 
-		driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys("");
+		driver.findElement(By.id("input-password")).sendKeys("");
 
 	}
 	
