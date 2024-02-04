@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import java.util.Date;
 import java.util.Map;
 
 import org.junit.Assert;
@@ -12,31 +11,36 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.HomePage;
+import pages.RegisterPage;
+import utils.CommonUtils;
 
 public class Register {
 
 	WebDriver driver;
+	private RegisterPage registerPage;
 
 	@Given("User navigates to Register Account page")
 	public void user_navigates_to_register_account_page() {
 
 		driver = DriverFactory.getDriver();
-
-		driver.findElement(By.xpath("//span[normalize-space()='My Account']")).click();
-		driver.findElement(By.xpath("//a[normalize-space()='Register']")).click();
+		HomePage homepage = new HomePage(driver);
+		homepage.clickOnMyAccount();
+		homepage.selectRegisterOption();
 
 	}
 
 	@When("User enters the details into below fields")
 	public void user_enters_the_details_into_below_fields(DataTable dataTable) {
 		Map<String, String> dataMap = dataTable.asMap(String.class, String.class);
-
-		driver.findElement(By.id("input-firstname")).sendKeys(dataMap.get("firstName"));
-		driver.findElement(By.id("input-lastname")).sendKeys(dataMap.get("lastName"));
-		driver.findElement(By.id("input-email")).sendKeys(randomEmailGenerator());
-		driver.findElement(By.id("input-telephone")).sendKeys(dataMap.get("telephone"));
-		driver.findElement(By.id("input-password")).sendKeys(dataMap.get("password"));
-		driver.findElement(By.id("input-confirm")).sendKeys(dataMap.get("password"));
+		
+		registerPage = new RegisterPage(driver);
+		registerPage.enterFirstName(dataMap.get("firstName"));
+		registerPage.enterLastName(dataMap.get("lastName"));
+		registerPage.enterEmail(CommonUtils.randomEmailGenerator());
+		registerPage.enterTelephone(dataMap.get("telephone"));
+		registerPage.enterPassword(dataMap.get("password"));
+		registerPage.enterConfirmPassword(dataMap.get("password"));
 		
 	}
 	
@@ -44,12 +48,13 @@ public class Register {
 	public void User_enters_the_details_into_below_fields_with_duplicate_email(DataTable dataTable) {
 		Map<String, String> dataMap = dataTable.asMap(String.class, String.class);
 
-		driver.findElement(By.id("input-firstname")).sendKeys(dataMap.get("firstName"));
-		driver.findElement(By.id("input-lastname")).sendKeys(dataMap.get("lastName"));
-		driver.findElement(By.id("input-email")).sendKeys(dataMap.get("email"));
-		driver.findElement(By.id("input-telephone")).sendKeys(dataMap.get("telephone"));
-		driver.findElement(By.id("input-password")).sendKeys(dataMap.get("password"));
-		driver.findElement(By.id("input-confirm")).sendKeys(dataMap.get("password"));
+		registerPage = new RegisterPage(driver);
+		registerPage.enterFirstName(dataMap.get("firstName"));
+		registerPage.enterLastName(dataMap.get("lastName"));
+		registerPage.enterEmail(dataMap.get("email"));
+		registerPage.enterTelephone(dataMap.get("telephone"));
+		registerPage.enterPassword(dataMap.get("password"));
+		registerPage.enterConfirmPassword(dataMap.get("password"));
 		
 	}
 
@@ -118,13 +123,6 @@ public class Register {
 		Assert.assertEquals("Password must be between 4 and 20 characters!",
 				driver.findElement(By.xpath("//div[contains(text(),'Password must be between 4 and 20 characters!')]"))
 						.getText());
-
-	}
-
-	private String randomEmailGenerator() {
-
-		Date date = new Date();
-		return "shuvo" + date.toString().replace(" ", "_").replace(":", "_") + "@gmail.com";
 
 	}
 }

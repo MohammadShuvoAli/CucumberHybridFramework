@@ -21,12 +21,20 @@ public class HomePage {
 	@FindBy(xpath="//a[normalize-space()='Login']")
 	private WebElement loginOption;
 	
+
+	@FindBy(linkText = "Register")
+	private WebElement registerOption;
+	
 	public void selectLoginOption() {
 		loginOption.click();
 	}
 	
 	public void clickOnMyAccount() {
 		myAccountDropdown.click();
+	}
+	
+	public void selectRegisterOption() {
+		registerOption.click();
 	}
 
 }
