@@ -18,29 +18,38 @@ public class LoginPage {
 
 	@FindBy(id = "input-email")
 	private WebElement emailField;
-	
+
 	@FindBy(id = "input-password")
 	private WebElement passwordField;
 
 	@FindBy(xpath = "//input[@value='Login']")
 	private WebElement loginButton;
 
+	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
+	private WebElement warningMessage;
+
 	public void enterEmailAddress(String emailText) {
 
 		emailField.sendKeys(emailText);
 
 	}
-	
+
 	public void enterPassword(String passwordText) {
 
 		passwordField.sendKeys(passwordText);
 
 	}
-		
+
 	public void clickOnLoginButton() {
 
 		loginButton.click();
 
 	}
+
+	public String getWarningMessageText() {
+
+		return warningMessage.getText();
 	
+	}
+
 }
