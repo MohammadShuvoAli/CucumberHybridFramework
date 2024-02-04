@@ -10,10 +10,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.HomePage;
+import pages.LoginPage;
 
 public class Login {
 
 	WebDriver driver;
+	private LoginPage loginPage;
 
 	@Given("User has navigated to login page")
 	public void user_has_navigated_to_login_page() {
@@ -26,8 +28,9 @@ public class Login {
 
 	@When("User enters valid email address {string} into email field")
 	public void user_enters_valid_email_address_into_email_field(String emailText) {
-
-		driver.findElement(By.id("input-email")).sendKeys(emailText);
+		
+		loginPage = new LoginPage(driver);
+		loginPage.enterEmailAddress(emailText);
 
 	}
 	
@@ -41,15 +44,15 @@ public class Login {
 	@When("User enters valid password {string} into password field")
 	public void user_enters_valid_password_into_password_field(String passwordText) {
 
-		driver.findElement(By.id("input-password")).sendKeys(passwordText);
+		loginPage.enterPassword(passwordText);
 
 	}
 
 	@When("User clicks on Login button")
 	public void user_clicks_on_login_button() {
-
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
-
+		
+		loginPage.clickOnLoginButton();
+		
 	}
 
 	@Then("User should get successfully logged in")
@@ -66,8 +69,8 @@ public class Login {
 
 	@When("User has entered valid password {string} into password field")
 	public void user_has_entered_valid_password_into_password_field(String passwordText) {
-
-		driver.findElement(By.id("input-password")).sendKeys(passwordText);
+		
+		loginPage.enterPassword(passwordText);
 
 	}
 
