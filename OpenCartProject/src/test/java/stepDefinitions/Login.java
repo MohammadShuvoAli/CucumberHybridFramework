@@ -14,7 +14,7 @@ public class Login {
 
 	WebDriver driver;
 	private LoginPage loginPage;
-
+	
 	@Given("User has navigated to login page")
 	public void user_has_navigated_to_login_page() {
 
@@ -24,7 +24,7 @@ public class Login {
 		homepage.selectLoginOption();
 	}
 
-	@When("User enters valid email address {string} into email field")
+	@When("^User enters valid email address (.+) into email field$")
 	public void user_enters_valid_email_address_into_email_field(String emailText) {
 
 		loginPage = new LoginPage(driver);
@@ -40,7 +40,7 @@ public class Login {
 		
 	}
 
-	@When("User enters valid password {string} into password field")
+	@When("^User enters valid password (.+) into password field$")
 	public void user_enters_valid_password_into_password_field(String passwordText) {
 
 		loginPage.enterPassword(passwordText);
