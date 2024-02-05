@@ -30,6 +30,9 @@ public class Search {
 		homePage = new HomePage(driver);
 		homePage.enterProductIntoSearchBox(validProductText);
 
+		// adding fail() for checking screenshot
+		Assert.fail();
+		
 	}
 
 	@When("User clicks on Search button")
@@ -53,6 +56,9 @@ public class Search {
 
 		homePage = new HomePage(driver);
 		homePage.enterProductIntoSearchBox(invalidProductText);
+		
+		// adding fail() for checking screenshot
+		Assert.fail();
 
 	}
 
