@@ -10696,3 +10696,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.oomph.setup.ui 1 0 2024-02-05 20:53:42.933
 !MESSAGE Setup tasks were performed during startup. See 'C:\Users\Shuvo\eclipse\java-2023-06\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-02-05 21:31:37.746
+!MESSAGE The workspace will exit with unsaved changes in this session.
