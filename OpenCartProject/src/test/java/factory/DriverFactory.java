@@ -7,6 +7,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import utils.CommonUtils;
+
 public class DriverFactory {
 
 	static WebDriver driver = null;
@@ -33,7 +35,8 @@ public class DriverFactory {
 
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(CommonUtils.PAGE_LOAD_TIME));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(CommonUtils.IMEXPLICIT_WAIT_BASIC_TIME));
 		
 		return driver;
 
