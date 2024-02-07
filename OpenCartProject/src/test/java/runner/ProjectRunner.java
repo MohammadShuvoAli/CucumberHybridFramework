@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
     features = "src/test/resources/features",
     glue = {"stepDefinitions", "hooks"},
     publish = true,
-    plugin = {"pretty", "html:target/CucumberReports/CucumberReportWithScreenshot.html"}
+    plugin = {"pretty", "html:target/CucumberReports/CucumberReportNEW.html"}
 )
 public class ProjectRunner {
     // Leave this class empty
