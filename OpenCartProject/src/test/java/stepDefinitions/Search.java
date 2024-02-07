@@ -31,7 +31,7 @@ public class Search {
 		homePage.enterProductIntoSearchBox(validProductText);
 
 		// adding fail() for checking screenshot
-		Assert.fail();
+		// Assert.fail();
 		
 	}
 
@@ -58,7 +58,7 @@ public class Search {
 		homePage.enterProductIntoSearchBox(invalidProductText);
 		
 		// adding fail() for checking screenshot
-		Assert.fail();
+		// Assert.fail();
 
 	}
 
