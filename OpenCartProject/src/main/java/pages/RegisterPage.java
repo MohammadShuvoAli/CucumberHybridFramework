@@ -5,148 +5,156 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utils.CommonUtils;
+import utils.ElementUtils;
+
 public class RegisterPage {
-
+	
 	WebDriver driver;
-
+	private ElementUtils elementUtils;
+	
 	public RegisterPage(WebDriver driver) {
-
+		
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
-
+		PageFactory.initElements(driver,this);
+		elementUtils = new ElementUtils(driver);
+		
 	}
-
-	@FindBy(id = "input-firstname")
+	
+	@FindBy(id="input-firstname")
 	private WebElement firstNameField;
-
-	@FindBy(id = "input-lastname")
+	
+	@FindBy(id="input-lastname")
 	private WebElement lastNameField;
-
-	@FindBy(id = "input-email")
+	
+	@FindBy(id="input-email")
 	private WebElement emailField;
-
-	@FindBy(id = "input-telephone")
+	
+	@FindBy(id="input-telephone")
 	private WebElement telephoneField;
-
-	@FindBy(id = "input-password")
+	
+	@FindBy(id="input-password")
 	private WebElement passwordField;
-
-	@FindBy(id = "input-confirm")
-	private WebElement confirmPasswordField;
-
-	@FindBy(name = "agree")
+	
+	@FindBy(id="input-confirm")
+	private WebElement passwordConfirmField;
+	
+	@FindBy(name="agree")
 	private WebElement privacyPolicyOption;
-
-	@FindBy(xpath = "//input[@value='Continue']")
+	
+	@FindBy(xpath="//input[@value='Continue']")
 	private WebElement continueButton;
-
-	@FindBy(xpath = "//input[@name='newsletter' and @value=1]")
-	private WebElement YesNewsLetterOption;
-
-	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
+	
+	@FindBy(xpath="//input[@name='newsletter'][@value='1']")
+	private WebElement YesNewsletterOption;
+	
+	@FindBy(xpath="//div[contains(@class,'alert-dismissible')]")
 	private WebElement warningMessage;
-
-	@FindBy(xpath = "//*[@id=\"account\"]/div[2]/div/div")
+	
+	@FindBy(xpath="//input[@id='input-firstname']/following-sibling::div")
 	private WebElement firstNameWarning;
-
-	@FindBy(xpath = "//*[@id=\"account\"]/div[3]/div/div")
-	private WebElement lastNameWarning;
-
-	@FindBy(xpath = "//*[@id=\"account\"]/div[4]/div/div")
+	
+	@FindBy(xpath="//input[@id='input-lastname']/following-sibling::div")
+	private WebElement lastNameWaring;
+	
+	@FindBy(xpath="//input[@id='input-email']/following-sibling::div")
 	private WebElement emailWarning;
-
-	@FindBy(xpath = "//*[@id=\"account\"]/div[5]/div/div")
+	
+	@FindBy(xpath="//input[@id='input-telephone']/following-sibling::div")
 	private WebElement telephoneWarning;
-
-	@FindBy(xpath = "//*[@id=\"content\"]/form/fieldset[2]/div[1]/div/div")
+	
+	@FindBy(xpath="//input[@id='input-password']/following-sibling::div")
 	private WebElement passwordWarning;
-
+	
 	public void enterFirstName(String firstNameText) {
-
-		firstNameField.sendKeys(firstNameText);
-
+		
+		elementUtils.typeTextIntoElement(firstNameField, firstNameText,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
+	
 	public void enterLastName(String lastNameText) {
-
-		lastNameField.sendKeys(lastNameText);
-
+		
+		elementUtils.typeTextIntoElement(lastNameField, lastNameText,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
-	public void enterEmail(String emailText) {
-
-		emailField.sendKeys(emailText);
-
+	
+	public void enterEmailAddress(String emailText) {
+		
+		elementUtils.typeTextIntoElement(emailField, emailText,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
-	public void enterTelephone(String telephoneText) {
-
-		telephoneField.sendKeys(telephoneText);
-
+	
+	public void enterTelephoneNumber(String telephoneText) {
+		
+		elementUtils.typeTextIntoElement(telephoneField, telephoneText,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
+	
 	public void enterPassword(String passwordText) {
-
-		passwordField.sendKeys(passwordText);
-
+		
+		elementUtils.typeTextIntoElement(passwordField, passwordText,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
-	public void enterConfirmPassword(String confirmPasswordText) {
-
-		confirmPasswordField.sendKeys(confirmPasswordText);
-
+	
+	public void enterConfirmPassword(String passwordText) {
+		
+		elementUtils.typeTextIntoElement(passwordConfirmField, passwordText,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
+	
 	public void selectPrivacyPolicy() {
-
-		privacyPolicyOption.click();
-
+		
+		elementUtils.clickOnElement(privacyPolicyOption,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
-	public void clickOnContinueButton() {
-
-		continueButton.click();
-
+	
+	public AccountSuccessPage clickOnContinueButton() {
+		
+		elementUtils.clickOnElement(continueButton,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
-	public void selectYesNewsLetterOption() {
-
-		YesNewsLetterOption.click();
-
+	
+	public void selectYesNewsletterOption() {
+		
+		elementUtils.clickOnElement(YesNewsletterOption,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
+	
 	public String getWarningMessageText() {
-
-		return warningMessage.getText();
+		
+		return elementUtils.getTextFromElement(warningMessage,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
+	
 	public String getFirstNameWarning() {
-
-		return firstNameWarning.getText();
-
+		
+		return elementUtils.getTextFromElement(firstNameWarning,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
+	
 	public String getLastNameWarning() {
-
-		return lastNameWarning.getText();
-
+		
+		return elementUtils.getTextFromElement(lastNameWaring,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
+	
 	public String getEmailWarning() {
-
-		return emailWarning.getText();
-
+		
+		return elementUtils.getTextFromElement(emailWarning,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
+	
 	public String getTelephoneWarning() {
-
-		return telephoneWarning.getText();
-
+		
+		return elementUtils.getTextFromElement(telephoneWarning,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
-
-	public String getPassowrdWarning() {
-
-		return passwordWarning.getText();
-
+	
+	public String getPasswordWarning() {
+		
+		return elementUtils.getTextFromElement(passwordWarning,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
+	
+
 }
