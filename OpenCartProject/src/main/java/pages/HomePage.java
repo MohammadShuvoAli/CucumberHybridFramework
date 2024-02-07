@@ -37,27 +37,31 @@ public class HomePage {
 
 	public void selectLoginOption() {
 		
-		elementUtils.clickOnElement(loginOption, 30);
+		elementUtils.clickOnElement(loginOption, 10);
 		
 	}
 
 	public void clickOnMyAccount() {
 		
-		elementUtils.clickOnElement(myAccountDropdown, 30);
+		elementUtils.clickOnElement(myAccountDropdown, 10);
 		
 	}
 
 	public void selectRegisterOption() {
-		registerOption.click();
+		
+		elementUtils.clickOnElement(registerOption, 10);
+		
 	}
 
 	public void enterProductIntoSearchBox(String productText) {
-		seachBoxField.sendKeys(productText);
+		
+		elementUtils.typeTextIntoElement(seachBoxField, productText, 10);
+		
 	}
 	
 	public void clickOnSearchButton() {
 		
-		searchButton.click();
+		elementUtils.clickOnElement(searchButton, 10);
 		
 	}
 
