@@ -38,8 +38,8 @@ public class Register {
 		registerPage = new RegisterPage(driver);
 		registerPage.enterFirstName(dataMap.get("firstName"));
 		registerPage.enterLastName(dataMap.get("lastName"));
-		registerPage.enterEmail(CommonUtils.randomEmailGenerator());
-		registerPage.enterTelephone(dataMap.get("telephone"));
+		registerPage.enterEmailAddress(CommonUtils.randomEmailGenerator());
+		registerPage.enterTelephoneNumber(dataMap.get("telephone"));
 		registerPage.enterPassword(dataMap.get("password"));
 		registerPage.enterConfirmPassword(dataMap.get("password"));
 		
@@ -52,8 +52,8 @@ public class Register {
 		registerPage = new RegisterPage(driver);
 		registerPage.enterFirstName(dataMap.get("firstName"));
 		registerPage.enterLastName(dataMap.get("lastName"));
-		registerPage.enterEmail(dataMap.get("email"));
-		registerPage.enterTelephone(dataMap.get("telephone"));
+		registerPage.enterEmailAddress(dataMap.get("email"));
+		registerPage.enterTelephoneNumber(dataMap.get("telephone"));
 		registerPage.enterPassword(dataMap.get("password"));
 		registerPage.enterConfirmPassword(dataMap.get("password"));
 		
@@ -84,7 +84,7 @@ public class Register {
 	@When("User selects Yes for Newsletter")
 	public void user_selects_yes_for_newsletter() {
 
-		registerPage.selectYesNewsLetterOption();
+		registerPage.selectYesNewsletterOption();
 
 	}
 
@@ -110,7 +110,7 @@ public class Register {
 		Assert.assertEquals("Last Name must be between 1 and 32 characters!", registerPage.getLastNameWarning());
 		Assert.assertEquals("E-Mail Address does not appear to be valid!", registerPage.getEmailWarning());
 		Assert.assertEquals("Telephone must be between 3 and 32 characters!", registerPage.getTelephoneWarning());
-		Assert.assertEquals("Password must be between 4 and 20 characters!", registerPage.getPassowrdWarning());
+		Assert.assertEquals("Password must be between 4 and 20 characters!", registerPage.getPasswordWarning());
 
 	}
 }
