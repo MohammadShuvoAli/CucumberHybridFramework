@@ -51,8 +51,8 @@ public class LoginPage {
 	}
 
 	public String getWarningMessageText() {
-
-		return warningMessage.getText();
+		
+		return elementUtils.getTextFromElement(warningMessage, 10);
 	
 	}
 
