@@ -108,9 +108,9 @@ public class RegisterPage {
 		
 	}
 	
-	public AccountSuccessPage clickOnContinueButton() {
+	public void clickOnContinueButton() {
 		
-		elementUtils.clickOnElement(continueButton,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		elementUtils.clickOnElement(continueButton, CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
 		
 	}
 	
