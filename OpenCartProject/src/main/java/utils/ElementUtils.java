@@ -122,4 +122,8 @@ public class ElementUtils {
 			return false;
 		}
 	}
+	
+	public void getTextFromElement() {
+		
+	}
 }
