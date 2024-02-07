@@ -11,6 +11,6 @@ import org.junit.runner.RunWith;
     publish = true,
     plugin = {"pretty", "html:target/CucumberReports/CucumberReportNEW.html"}
 )
-public class ProjectRunner {
+public class TestRunner {
     // Leave this class empty
 }
