@@ -24,7 +24,6 @@
     <fullyQualifiedTypeName name="java.util.Properties"/>
     <fullyQualifiedTypeName name="pages.LoginPage"/>
     <fullyQualifiedTypeName name="pages.RegisterPage"/>
-    <fullyQualifiedTypeName name="utils.CommonUtils"/>
     <fullyQualifiedTypeName name="pages.AccountSuccessPage"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
     <fullyQualifiedTypeName name="pages.HomePage"/>
@@ -37,4 +36,10 @@
     <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Select"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.Alert"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.JavascriptExecutor"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
+    <fullyQualifiedTypeName name="utils.ElementUtils"/>
+    <fullyQualifiedTypeName name="utils.CommonUtils"/>
 </qualifiedTypeNameHistroy>
