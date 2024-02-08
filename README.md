@@ -62,6 +62,4 @@ To execute the test suite, use the TestRunner class in the `src/test/java/runner
 ![Cucumber HTML Report](https://github.com/MohammadShuvoAli/CucumberHybridFramework/blob/main/Screenshot/CucumberReport.png)
 
 **Failed Test Screenshot:**
-![Failed Test Screenshot](./screenshots/FailedTestScreenshot.png)
-
-Feel free to explore and contribute to this robust automation framework!
+![Failed Test Screenshot](https://github.com/MohammadShuvoAli/CucumberHybridFramework/blob/main/Screenshot/FailedTest.png)
