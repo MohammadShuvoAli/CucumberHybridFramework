@@ -51,10 +51,8 @@ The project follows a well-organized structure for easy navigation and maintenan
 - **HTML Reporting:** Cucumber generates detailed HTML reports with a breakdown of test scenarios, steps, and execution status for clear visualization of test results.
 
 - **Jenkins Integration:** Jenkins integration is supported for continuous integration and automated builds. A sample Jenkins pipeline script can be provided for seamless integration.
-
-## How to Run
-
-To execute the test suite, use the TestRunner class in the `src/test/java/runner` package. The project can be integrated into Jenkins for automated test execution.
+  
+![](https://github.com/MohammadShuvoAli/CucumberHybridFramework/blob/main/Screenshot/Jenkins%20Integration.png)
 
 ## Screenshots
 
@@ -63,3 +61,7 @@ To execute the test suite, use the TestRunner class in the `src/test/java/runner
 
 **Failed Test Screenshot:**
 ![Failed Test Screenshot](https://github.com/MohammadShuvoAli/CucumberHybridFramework/blob/main/Screenshot/FailedTest.png)
+
+## How to Run
+
+To execute the test suite, use the TestRunner class in the `src/test/java/runner` package. The project can be integrated into Jenkins for automated test execution.
