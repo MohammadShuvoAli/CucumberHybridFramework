@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This Maven project serves as a comprehensive test automation suite for the OpenCart e-commerce website. Leveraging Selenium for web automation, Cucumber for behavior-driven development (BDD) using Gherkin syntax, and Maven for project management, the framework ensures robust and scalable test automation. The test scenarios are written in Gherkin, providing a human-readable format for collaboration between technical and non-technical team members.
+This Maven project serves as a comprehensive test automation suite for the OpenCart e-commerce website. Leveraging Selenium for web automation, Cucumber for behavior-driven development (BDD) using Gherkin syntax, Junit and Maven for project management, the framework ensures robust and scalable test automation. The test scenarios are written in Gherkin, providing a human-readable format for collaboration between technical and non-technical team members.
 
 ## Project Structure
 
